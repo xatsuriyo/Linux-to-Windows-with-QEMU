@@ -32,8 +32,8 @@ fi
 sudo ln -s /usr/bin/genisoimage /usr/bin/mkisofs
 # Downloading resources
 sudo mkdir /mediabots /floppy /virtio
-link1_status=$(curl -Is http://163.172.181.86/WS2012R2.ISO | grep HTTP | cut -f2 -d" ")
-link2_status=$(curl -Is https://ia601506.us.archive.org/4/items/WS2012R2/WS2012R2.ISO | grep HTTP | cut -f2 -d" ")
+link1_status=$(curl -Is https://ia801001.us.archive.org/24/items/WinServer2019x64/en_windows_server_2019_x64_dvd_4cb967d8.iso | grep HTTP | cut -f2 -d" ")
+link2_status=$(curl -Is https://ia801001.us.archive.org/24/items/WinServer2019x64/en_windows_server_2019_x64_dvd_4cb967d8.iso | grep HTTP | cut -f2 -d" ")
 #sudo wget -P /mediabots https://archive.org/download/WS2012R2/WS2012R2.ISO # Windows Server 2012 R2 
 if [ $link1_status = "200" ] ; then 
 	sudo wget -P /mediabots http://163.172.181.86/WS2012R2.ISO
